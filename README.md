@@ -13,11 +13,28 @@ API для авторизации пользователей и совершен
     "password": "123456"
   }
 
+### Logout
+
+- **POST /api/Auth/logout** – завершает текущую сессию пользователя.
+Требует заголовок авторизации:
+
+curl -X POST "http://localhost:5000/api/Auth/logout" \
+  -H "Authorization: Bearer <your_jwt_token>"
+
+### Платеж
+
+- **POST /api/Payment/pay** – списывает деньги с баланса пользователя.
+Требует авторизацию:
+
+curl -X POST "http://localhost:5000/api/Payment/pay" \
+  -H "Authorization: Bearer <your_jwt_token>" \
+  -H "Content-Type: application/json"
+
 Запуск
 
 Клонировать репозиторий:
 
-git clone <URL>
+git clone <url>
 cd PaymentApi
 
 
@@ -26,12 +43,8 @@ cd PaymentApi
 docker-compose up --build
 
 
-API доступно: http://localhost:5000/
+После запуска:
 
-БД PostgreSQL запускается автоматически через Docker Compose.
+API доступно по адресу: http://localhost:5000/
 
-Баланс нового пользователя = 8 USD.
-
-Все платежи сохраняются в базе.
-
-JWT-токены поддерживают несколько сессий одновременно.
+PostgreSQL поднимается автоматически в контейнере

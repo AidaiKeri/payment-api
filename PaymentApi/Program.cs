@@ -8,6 +8,7 @@ using PaymentApi.Services.Implementations;
 using PaymentApi.Services.Interfaces;
 using System.Text;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SPPzgeI4goE=",
+  "dgSpecHash": "3eAi3axEP+I=",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\source\\repos\\PaymentApi\\PaymentApi\\PaymentApi.csproj",
+  "projectFilePath": "C:\\Users\\USER\\source\\repos\\payment-api\\PaymentApi\\PaymentApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.20\\microsoft.aspnetcore.authentication.jwtbearer.8.0.20.nupkg.sha512",

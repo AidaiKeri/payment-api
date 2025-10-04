@@ -9,13 +9,13 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PaymentApi
 build_property.RootNamespace = PaymentApi
-build_property.ProjectDir = C:\Users\USER\source\repos\PaymentApi\PaymentApi\
+build_property.ProjectDir = C:\Users\USER\source\repos\payment-api\PaymentApi\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\USER\source\repos\PaymentApi\PaymentApi
+build_property.MSBuildProjectDirectory = C:\Users\USER\source\repos\payment-api\PaymentApi
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/USER/AppData/Roaming/SonarLint for Visual Studio/.global/csharp/SonarLint.xml]

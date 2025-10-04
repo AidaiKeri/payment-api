@@ -88,14 +88,15 @@ namespace PaymentApi.Services.Implementations
             return new LoginResult(tokenString, session.ExpiresAt);
         }
 
-        public async Task LogoutAsync(string token)
+        public async Task<bool> LogoutAsync(string token)
         {
             var session = await _context.Sessions.FirstOrDefaultAsync(s => s.Token == token);
-            if (session != null)
-            {
-                _context.Sessions.Remove(session);
-                await _context.SaveChangesAsync();
-            }
+            if (session == null)
+                return false;
+
+            _context.Sessions.Remove(session);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
         private static bool VerifyPassword(string password, string storedHash)

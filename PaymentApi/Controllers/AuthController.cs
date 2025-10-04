@@ -36,9 +36,14 @@ public class AuthController : ControllerBase
         if (string.IsNullOrWhiteSpace(authHeader))
             return BadRequest(new { message = "Authorization header is missing" });
 
-        var token = authHeader.Replace("Bearer ", "");
-        await _authService.LogoutAsync(token);
-        return Ok();
+        var token = authHeader.Replace("Bearer ", "").Trim();
+
+        var response = await _authService.LogoutAsync(token);
+
+        if (!response)
+            return NotFound(new { message = "Session not found or already logged out" });
+
+        return Ok(new { message = "Logged out successfully" });
     }
 }
 

@@ -21,9 +21,8 @@ services:
     build: .
     container_name: paymentapi-api
     environment:
-      # Строка подключения внутри Docker использует имя контейнера db
       - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=paymentapi;Username=postgres;Password=postgres
-      - Jwt__Key=SuperSecretKey123456
+      - Jwt__Key=SuperSecretKey12345678901234567890
       - DOTNET_RUNNING_IN_CONTAINER=true
     depends_on:
       db:
@@ -33,5 +32,6 @@ services:
 
 volumes:
   db_data:
+
 
 
